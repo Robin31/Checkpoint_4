@@ -26,4 +26,12 @@ router.put("/caracteres/:id", caracteresControllers.edit);
 router.post("/caracteres", caracteresControllers.add);
 router.delete("/caracteres/:id", caracteresControllers.destroy);
 
+const chiensControllers = require("./controllers/chiensControllers");
+
+router.get("/chiens", chiensControllers.browse);
+router.get("/chiens/:id", chiensControllers.read);
+router.put("/chiens/:id", chiensControllers.edit);
+router.post("/chiens", chiensControllers.add);
+router.delete("/chiens/:id", chiensControllers.destroy);
+
 module.exports = router;
