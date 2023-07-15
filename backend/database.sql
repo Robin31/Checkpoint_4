@@ -1,4 +1,22 @@
 CREATE TABLE
+    users(
+        id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+        email VARCHAR(80) UNIQUE,
+        password LONGTEXT,
+        role VARCHAR(10) DEFAULT 'user'
+    );
+
+CREATE TABLE
+    profils(
+        id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+        firstname VARCHAR(80),
+        lastname VARCHAR(80),
+        src VARCHAR(255),
+        user_id INT,
+        CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users(id)
+    );
+
+CREATE TABLE
     races (
         id int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
         name varchar(25) NOT NULL
@@ -32,6 +50,37 @@ CREATE TABLE
         CONSTRAINT fk_sexe_id FOREIGN KEY (sexe_id) REFERENCES sexes(id) ON DELETE CASCADE,
         CONSTRAINT fk_caractere_id FOREIGN KEY (caractere_id) REFERENCES caracteres(id) ON DELETE CASCADE
     ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
+
+INSERT INTO
+    users (email, password, role)
+VALUES (
+        "admin@admin.com",
+        "admin123",
+        "admin"
+    );
+
+INSERT INTO
+    users (email, password)
+VALUES ("user@user.com", "user123");
+
+INSERT INTO
+    profils (
+        firstname,
+        lastname,
+        src,
+        user_id
+    )
+VALUES (
+        "Lucas",
+        "LeBaka",
+        "https://previews.123rf.com/images/jemastock/jemastock1705/jemastock170508361/78184821-t%C3%AAte-de-dessin-visage-souriant-illustration-de-vecteur-de-caract%C3%A8re-enfant.jpg",
+        1
+    ), (
+        "Marta",
+        "LePanda",
+        "https://previews.123rf.com/images/jemastock/jemastock1705/jemastock170508361/78184821-t%C3%AAte-de-dessin-visage-souriant-illustration-de-vecteur-de-caract%C3%A8re-enfant.jpg",
+        2
+    );
 
 INSERT INTO races (name)
 VALUES ("Boxer"), ("Chihuhua"), ("Teckel"), ("Malinois"), ("Berger Allemand"), ("Cocker"), ("Caniche"), ("Schnauzer"), ("Labrador"), ("Lévrier Afghan"), ("Husky"), ("Cane Corso"), ("Bouvier"), ("Bouledogue Anglais"), ("Beagle"), ("Shih Tzu"), ("Dalmatien"), ("Dobermann"), ("Saint-Bernard"), ("Border Collie"), ("Rottweiler"), ("Samoyède"), ("Bichon"), ("Berger Picard"), ("Barzoi");
