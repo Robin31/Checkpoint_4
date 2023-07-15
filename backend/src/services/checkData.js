@@ -20,7 +20,7 @@ const updateSchema = () => {
     email: joi.string().email({
       minDomainSegments: 2,
       tlds: { allow: ["com"] },
-    })
+    }),
 
     // firstname: joi.string().alphanum(),
     // lastname: joi.string().alphanum(),

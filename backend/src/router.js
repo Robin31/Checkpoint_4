@@ -18,7 +18,6 @@ router.post("/signup", checkUserData, hashPassword, authControllers.signup);
 router.get("/races", racesControllers.browse);
 router.get("/races/:id", racesControllers.read);
 
-
 router.get("/caracteres", caracteresControllers.browse);
 router.get("/caracteres/:id", caracteresControllers.read);
 
@@ -27,7 +26,6 @@ router.get("/chiens/:id", chiensControllers.read);
 
 router.get("/profils/:id", profilsControllers.findUser);
 router.get("/profils", checkUpdateData, profilsControllers.browse);
-
 
 router.use(checkUser);
 router.put("/races/:id", racesControllers.edit);
