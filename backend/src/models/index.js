@@ -29,10 +29,10 @@ pool.getConnection().catch(() => {
 
 const models = {};
 
-const ItemManager = require("./ItemManager");
+// const ItemManager = require("./ItemManager");
 
-models.item = new ItemManager();
-models.item.setDatabase(pool);
+// models.item = new ItemManager();
+// models.item.setDatabase(pool);
 
 const RacesManager = require("./RacesManager");
 
@@ -48,6 +48,16 @@ const ChiensManager = require("./ChiensManager");
 
 models.chiens = new ChiensManager();
 models.chiens.setDatabase(pool);
+
+const ProfilsManager = require("./ProfilsManager");
+
+models.profils = new ProfilsManager();
+models.profils.setDatabase(pool);
+
+const AuthManager = require("./AuthManager");
+
+models.auth = new AuthManager();
+models.auth.setDatabase(pool);
 
 // bonus: use a proxy to personalize error message,
 // when asking for a non existing model
