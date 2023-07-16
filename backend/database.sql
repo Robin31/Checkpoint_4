@@ -51,6 +51,13 @@ CREATE TABLE
         CONSTRAINT fk_caractere_id FOREIGN KEY (caractere_id) REFERENCES caracteres(id) ON DELETE CASCADE
     ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
+CREATE TABLE
+    faqs (
+        id int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+        question varchar(255) NOT NULL,
+        answer varchar(255) NOT NULL
+    ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
+
 INSERT INTO
     users (email, password, role)
 VALUES (
@@ -205,4 +212,32 @@ VALUES (
         8,
         1,
         2
+    );
+
+INSERT INTO
+    faqs (question, answer)
+VALUES (
+        "Puis-je devenir bénévole même si je suis allergique aux chats ?",
+        "Bien sur, nous n'avons que des chiens."
+    );
+
+INSERT INTO
+    faqs (question, answer)
+VALUES (
+        "Quelles sont les races de chiens les plus instagramables ?",
+        "Un chien n'est pas un jouet."
+    );
+
+INSERT INTO
+    faqs (question, answer)
+VALUES (
+        "Fournissez vous les croquettes quand on adopte un chien ?",
+        "Evidement, on vous fournis un rein et une voiture en plus."
+    );
+
+INSERT INTO
+    faqs (question, answer)
+VALUES (
+        "Je pars en vacance la semaine prochaine, dois je vous indiquer à quel arbre j'ai attaché mon chien où je vous l'apporte directement ?",
+        "Vous devez nous l'apporter directement que l'on puisse vous briser vos deux rotules."
     );
