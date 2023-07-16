@@ -4,7 +4,7 @@ import { FaDog, FaEuroSign, FaQuestion } from "react-icons/fa";
 import { BsFillPersonFill } from "react-icons/bs";
 import { HiMapPin } from "react-icons/hi2";
 import { FaHandshakeSimple } from "react-icons/fa6";
-import LogoRefuge from "../assets/LogoRefuge.png";
+import LogoRefuge from "../../assets/LogoRefuge.png";
 import "./Navbar.scss";
 
 function Navbar() {

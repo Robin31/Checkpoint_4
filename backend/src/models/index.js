@@ -54,6 +54,11 @@ const ProfilsManager = require("./ProfilsManager");
 models.profils = new ProfilsManager();
 models.profils.setDatabase(pool);
 
+const FaqsManager = require("./FaqsManager");
+
+models.faqs = new FaqsManager();
+models.faqs.setDatabase(pool);
+
 const AuthManager = require("./AuthManager");
 
 models.auth = new AuthManager();

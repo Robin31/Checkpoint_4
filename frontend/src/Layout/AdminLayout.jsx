@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../components/NavbarCard/Navbar";
 // import Connect from "../components/Connect";
 
-function UserLayout() {
+function AdminLayout() {
   return (
     <div>
       <Navbar />
@@ -13,4 +13,4 @@ function UserLayout() {
   );
 }
 
-export default UserLayout;
+export default AdminLayout;
