@@ -232,7 +232,7 @@ INSERT INTO
     faqs (question, answer)
 VALUES (
         "Fournissez vous les croquettes quand on adopte un chien ?",
-        "Evidement, on vous fournis un rein et une voiture en plus."
+        "Evidement, on vous fournit un rein et une voiture en plus."
     );
 
 INSERT INTO

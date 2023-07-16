@@ -6,6 +6,7 @@ import Faq from "./pages/User/Faq";
 
 import AdminLayout from "./Layout/AdminLayout";
 import Faqs from "./pages/admin/Faqs";
+import Races from "./pages/admin/Races";
 
 import "./App.css";
 
@@ -21,6 +22,7 @@ function App() {
         <Route>
           <Route path="/admin/" element={<AdminLayout />}>
             <Route path="faqs" element={<Faqs />} />
+            <Route path="races" element={<Races />} />
           </Route>
         </Route>
       </Routes>
