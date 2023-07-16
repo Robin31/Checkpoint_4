@@ -72,7 +72,7 @@ function Signin() {
           <form onSubmit={login} id="login-in" className="login__registre">
             <h1 className="login__title">Se connecter</h1>
             <div className="login__box">
-              <i class='bx bx-at login__icon'></i>
+              <i className="bx bx-at login__icon" />
               <input
                 type="email"
                 value={userSignin.email}
@@ -84,7 +84,7 @@ function Signin() {
               />
             </div>
             <div className="login__box">
-              <i className='bx bx-lock-alt login__icon'></i>
+              <i className="bx bx-lock-alt login__icon" />
               <input
                 type="password"
                 value={userSignin.password}
@@ -95,10 +95,17 @@ function Signin() {
                 required
               />
             </div>
-            <button type="submit" className="login__button">Connexion</button>
+            <button type="submit" className="login__button">
+              Connexion
+            </button>
             <div>
-              <span className="login__account">Vous n'avez pas de compte ?</span>
-              <span className="login__signin" id="sign-up"> S'enregistrer</span>
+              <span className="login__account">
+                Vous n'avez pas de compte ?
+              </span>
+              <span className="login__signin" id="sign-up">
+                {" "}
+                S'enregistrer
+              </span>
             </div>
           </form>
 
@@ -109,11 +116,9 @@ function Signin() {
             transition={Flip}
             toastClassName="custom-toast"
           />
-
         </div>
       </div>
     </div>
-
   );
 }
 

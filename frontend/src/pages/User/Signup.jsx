@@ -60,10 +60,14 @@ function Signup() {
           <img src={chiens} alt="" />
         </div>
         <div className="login__forms">
-          <form onSubmit={createAccount} class="login__create" id="login-up">
+          <form
+            onSubmit={createAccount}
+            className="login__create"
+            id="login-up"
+          >
             <h1 className="login__title">Créer un compte</h1>
             <div className="login__box">
-              <i className='bx bx-at login__icon'></i>
+              <i className="bx bx-at login__icon" />
               <input
                 type="email"
                 value={userSignup.email}
@@ -75,7 +79,7 @@ function Signup() {
               />
             </div>
             <div className="login__box">
-              <i className='bx bx-lock-alt login__icon'></i>
+              <i className="bx bx-lock-alt login__icon" />
               <input
                 type="password"
                 value={userSignup.password}
@@ -87,7 +91,7 @@ function Signup() {
               />
             </div>
             <div className="login__box">
-              <i className='bx bx-lock-alt login__icon'></i>
+              <i className="bx bx-lock-alt login__icon" />
               <input
                 type="password"
                 value={userSignup.passwordConfirmation}
@@ -99,10 +103,14 @@ function Signup() {
               />
             </div>
 
-            <button type="submit" className="login__button">S'inscrire</button>
+            <button type="submit" className="login__button">
+              S'inscrire
+            </button>
             <div>
               <span className="login__account">Vous avez déjà un compte ?</span>
-              <span className="login__signup" id="sign-in">Se connecter</span>
+              <span className="login__signup" id="sign-in">
+                Se connecter
+              </span>
             </div>
           </form>
           <ToastContainer
