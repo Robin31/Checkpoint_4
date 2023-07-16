@@ -3,6 +3,8 @@ import { toast, ToastContainer } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import connexion from "../../services/connexion";
 import "react-toastify/dist/ReactToastify.css";
+import chiens from "../../assets/chiens.png";
+import "./Signin.scss";
 
 function Signup() {
   const [userSignup, setUserSignup] = useState({
@@ -21,7 +23,7 @@ function Signup() {
     if (signup.status === 201) {
       toast.success(signup.data.msg);
       setTimeout(() => {
-        navigate("/");
+        navigate("/compte");
       }, 5000);
     } else if (signup.status === 409 || signup.status === 400) {
       toast.info(signup.data.msg);
@@ -52,42 +54,65 @@ function Signup() {
   };
 
   return (
-    <div>
-      <form onSubmit={createAccount}>
-        <input
-          type="email"
-          value={userSignup.email}
-          onChange={(event) => handleUser(event)}
-          name="email"
-          required
-        />
-        <label htmlFor="email">Email</label>
-        <input
-          type="password"
-          value={userSignup.password}
-          onChange={(event) => handleUser(event)}
-          name="password"
-          required
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          value={userSignup.passwordConfirmation}
-          onChange={(event) => handleUser(event)}
-          name="passwordConfirmation"
-          required
-        />
-        <label htmlFor="passwordConfirmation">Confirmer le mot de passe</label>
+    <div className="login">
+      <div className="login__content">
+        <div className="login__img">
+          <img src={chiens} alt="" />
+        </div>
+        <div className="login__forms">
+          <form onSubmit={createAccount} class="login__create" id="login-up">
+            <h1 className="login__title">Créer un compte</h1>
+            <div className="login__box">
+              <i className='bx bx-at login__icon'></i>
+              <input
+                type="email"
+                value={userSignup.email}
+                onChange={(event) => handleUser(event)}
+                name="email"
+                placeholder="Email"
+                className="login__input"
+                required
+              />
+            </div>
+            <div className="login__box">
+              <i className='bx bx-lock-alt login__icon'></i>
+              <input
+                type="password"
+                value={userSignup.password}
+                onChange={(event) => handleUser(event)}
+                name="password"
+                placeholder="Password"
+                className="login__input"
+                required
+              />
+            </div>
+            <div className="login__box">
+              <i className='bx bx-lock-alt login__icon'></i>
+              <input
+                type="password"
+                value={userSignup.passwordConfirmation}
+                onChange={(event) => handleUser(event)}
+                name="passwordConfirmation"
+                placeholder="Confirmer le mot de passe"
+                className="login__input"
+                required
+              />
+            </div>
 
-        <button type="submit">Signup</button>
-
-        <ToastContainer
-          autoClose={5000}
-          position="top-center"
-          draggable
-          pauseOnHover
-        />
-      </form>
+            <button type="submit" className="login__button">S'inscrire</button>
+            <div>
+              <span className="login__account">Vous avez déjà un compte ?</span>
+              <span className="login__signup" id="sign-in">Se connecter</span>
+            </div>
+          </form>
+          <ToastContainer
+            autoClose={5000}
+            position="top-center"
+            draggable
+            pauseOnHover
+          />
+        </div>
+      </div>
     </div>
   );
 }

@@ -5,6 +5,9 @@ import connexion from "../../services/connexion";
 import { useCurrentUser } from "../../contexts/AuthContexts";
 import "react-toastify/dist/ReactToastify.css";
 
+import chiens from "../../assets/chiens.png";
+import "./Signin.scss";
+
 function Signin() {
   const [userSignin, setUserSignin] = useState({
     email: "",
@@ -37,8 +40,6 @@ function Signin() {
         const profil = {
           role: signin.data.role,
           id: signin.data.id,
-          firstname: signin.data.firstname,
-          premium: signin.data.premium === 1,
           connected: true,
         };
         setUser(profil);
@@ -61,37 +62,58 @@ function Signin() {
   };
 
   return (
-    <div>
-      <form onSubmit={login}>
-        <input
-          type="email"
-          value={userSignin.email}
-          onChange={(event) => handleUser(event)}
-          name="email"
-          required
-        />
-        <label htmlFor="email">Email</label>
+    <div className="login">
+      <div className="login__content">
+        <div className="login__img">
+          <img src={chiens} alt="" />
+        </div>
 
-        <input
-          type="password"
-          value={userSignin.password}
-          onChange={(event) => handleUser(event)}
-          name="password"
-          required
-        />
-        <label htmlFor="password">Password</label>
+        <div className="login__forms">
+          <form onSubmit={login} id="login-in" className="login__registre">
+            <h1 className="login__title">Se connecter</h1>
+            <div className="login__box">
+              <i class='bx bx-at login__icon'></i>
+              <input
+                type="email"
+                value={userSignin.email}
+                onChange={(event) => handleUser(event)}
+                name="email"
+                placeholder="Email"
+                className="login__input"
+                required
+              />
+            </div>
+            <div className="login__box">
+              <i className='bx bx-lock-alt login__icon'></i>
+              <input
+                type="password"
+                value={userSignin.password}
+                onChange={(event) => handleUser(event)}
+                name="password"
+                placeholder="Mot de passe"
+                className="login__input"
+                required
+              />
+            </div>
+            <button type="submit" className="login__button">Connexion</button>
+            <div>
+              <span className="login__account">Vous n'avez pas de compte ?</span>
+              <span className="login__signin" id="sign-up"> S'enregistrer</span>
+            </div>
+          </form>
 
-        <button type="submit">Signin</button>
+          <ToastContainer
+            autoClose={2000}
+            position="top-center"
+            draggable
+            transition={Flip}
+            toastClassName="custom-toast"
+          />
 
-        <ToastContainer
-          autoClose={2000}
-          position="top-center"
-          draggable
-          transition={Flip}
-          toastClassName="custom-toast"
-        />
-      </form>
+        </div>
+      </div>
     </div>
+
   );
 }
 
