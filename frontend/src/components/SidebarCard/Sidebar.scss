@@ -1,0 +1,56 @@
+.sidebar {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(209, 244, 240, 1) 43%,
+    rgba(69, 242, 252, 1) 100%
+  );
+  color: rgb(56, 56, 55);
+  height: 100vh;
+  width: 200px;
+  transition: all 0.5s;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.top_section {
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+}
+
+.bars {
+  display: flex;
+  font-size: 1.5rem;
+  margin-left: 50px;
+}
+
+.link {
+  display: flex;
+  color: rgb(56, 56, 55);
+  padding: 10px 15px;
+  gap: 15px;
+  transition: all 0.5s;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link:hover {
+  background: rgb(246, 246, 246);
+  color: rgb(36, 36, 36);
+  transition: all 0.5s;
+}
+
+.link:active {
+  background: rgb(246, 246, 246);
+  color: #fff;
+}
+
+.link_text {
+  font-size: 1.1rem;
+}
+
+.icon {
+  font-size: 1.4rem;
+}
