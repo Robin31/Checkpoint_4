@@ -5,6 +5,7 @@ import { PiUserCircleLight } from "react-icons/pi";
 import { TfiAlignJustify } from "react-icons/tfi";
 import { FaDog, FaQuestion } from "react-icons/fa";
 import { FaHandshakeSimple } from "react-icons/fa6";
+import { MdOutlineLogout } from "react-icons/md";
 import { TbNumber } from "react-icons/tb";
 import { LiaDnaSolid } from "react-icons/lia";
 import "./Sidebar.scss";
@@ -47,6 +48,12 @@ function Sidebar() {
       title: "Chiffres",
       path: "/admin/chiffres",
       icon: <TbNumber />,
+      cName: "nav-text",
+    },
+    {
+      title: "Déconnexion",
+      path: "/",
+      icon: <MdOutlineLogout />,
       cName: "nav-text",
     },
   ];
