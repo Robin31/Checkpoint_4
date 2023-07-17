@@ -110,6 +110,7 @@ function Signup() {
               <span className="login__account">Vous avez déjà un compte ?</span>
               <Link to="/compte">
                 <span className="login__signup" id="sign-in">
+                  {" "}
                   Se connecter
                 </span>
               </Link>
