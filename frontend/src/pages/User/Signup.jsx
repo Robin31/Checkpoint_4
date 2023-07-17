@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
-import { useNavigate } from "react-router-dom";
 import connexion from "../../services/connexion";
 import "react-toastify/dist/ReactToastify.css";
 import chiens from "../../assets/chiens.png";
@@ -108,9 +108,12 @@ function Signup() {
             </button>
             <div>
               <span className="login__account">Vous avez déjà un compte ?</span>
-              <span className="login__signup" id="sign-in">
-                Se connecter
-              </span>
+              <Link to="/compte">
+                <span className="login__signup" id="sign-in">
+                  {" "}
+                  Se connecter
+                </span>
+              </Link>
             </div>
           </form>
           <ToastContainer
