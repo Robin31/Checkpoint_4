@@ -1,15 +1,11 @@
-/*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 
-/*===== VARIABLES CSS =====*/
 :root {
-  /*===== Colores =====*/
   --first-color: #23a2cb;
   --first-color-dark: #094b61;
   --first-color-light: #7ad9f8;
   --first-color-lighten: #f2f2f2;
 
-  /*===== Font and typography =====*/
   --body-font: "Open Sans", sans-serif;
 
   --h1-font-size: 1.5rem;
@@ -22,7 +18,6 @@
   }
 }
 
-/*===== BASE =====*/
 *,
 ::before,
 ::after {
@@ -53,7 +48,6 @@ img {
   display: block;
 }
 
-/*===== LOGIN=====*/
 .login {
   display: grid;
   grid-template-columns: 100%;
@@ -195,17 +189,13 @@ img {
   }
 }
 
-/*Show login*/
 .block {
   display: block;
 }
 
-/*Hidden login*/
 .none {
   display: none;
 }
-
-/* ===== MEDIA QUERIES =====*/
 
 @media screen and (min-width: 576px) {
   .login {

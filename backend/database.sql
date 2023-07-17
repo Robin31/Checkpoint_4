@@ -92,7 +92,8 @@ VALUES (
 INSERT INTO races (name)
 VALUES ("Boxer"), ("Chihuhua"), ("Teckel"), ("Malinois"), ("Berger Allemand"), ("Cocker"), ("Caniche"), ("Schnauzer"), ("Labrador"), ("Lévrier Afghan"), ("Husky"), ("Cane Corso"), ("Bouvier"), ("Bouledogue Anglais"), ("Beagle"), ("Shih Tzu"), ("Dalmatien"), ("Dobermann"), ("Saint-Bernard"), ("Border Collie"), ("Rottweiler"), ("Samoyède"), ("Bichon"), ("Berger Picard"), ("Barzoi");
 
-INSERT INTO sexes (attribut) VALUES ("Mâle"), ("Femelle");
+INSERT INTO sexes (attribut)
+VALUES ("Mâle"), ("Femelle"), ("Non binaire");
 
 INSERT INTO
     caracteres (caractere)
