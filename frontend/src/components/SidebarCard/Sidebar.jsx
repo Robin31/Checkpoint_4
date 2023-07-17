@@ -55,7 +55,7 @@ function Sidebar() {
       path: "/",
       icon: <MdOutlineLogout />,
       cName: "nav-text",
-    }
+    },
   ];
 
   return (
