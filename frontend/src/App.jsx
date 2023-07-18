@@ -1,8 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import UserLayout from "./Layout/UserLayout";
 import Signin from "./pages/User/Signin";
 import Signup from "./pages/User/Signup";
 import Faq from "./pages/User/Faq";
+import Chien from "./pages/User/Chien";
+import ChienSolo from "./pages/User/ChienSolo";
 
 import AdminLayout from "./Layout/AdminLayout";
 import Faqs from "./pages/admin/Faqs";
@@ -19,6 +22,8 @@ function App() {
           <Route path="compte" element={<Signin />} />
           <Route path="signup" element={<Signup />} />
           <Route path="faq" element={<Faq />} />
+          <Route path="chiens" element={<Chien />} />
+          <Route path="chiens/:id" element={<ChienSolo />} />
         </Route>
         <Route path="/admin" element={<AdminLayout />}>
           <Route path="faqs" element={<Faqs />} />
