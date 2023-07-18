@@ -90,7 +90,7 @@ VALUES (
     );
 
 INSERT INTO races (name)
-VALUES ("Boxer"), ("Chihuhua"), ("Teckel"), ("Malinois"), ("Berger Allemand"), ("Cocker"), ("Caniche"), ("Schnauzer"), ("Labrador"), ("Lévrier Afghan"), ("Husky"), ("Cane Corso"), ("Bouvier"), ("Bouledogue Anglais"), ("Beagle"), ("Shih Tzu"), ("Dalmatien"), ("Dobermann"), ("Saint-Bernard"), ("Border Collie"), ("Rottweiler"), ("Samoyède"), ("Bichon"), ("Berger Picard"), ("Barzoi");
+VALUES ("Boxer"), ("Chihuhua papillon"), ("Teckel"), ("Malinois"), ("Berger Allemand"), ("Cocker"), ("Caniche"), ("Schnauzer"), ("Labrador"), ("Lévrier Afghan"), ("Husky"), ("Cane Corso"), ("Bouvier"), ("Bouledogue Anglais"), ("Beagle"), ("Shih Tzu"), ("Dalmatien"), ("Dobermann"), ("Saint-Bernard"), ("Border Collie"), ("Rottweiler"), ("Samoyède"), ("Bichon"), ("Berger Picard"), ("Barzoi");
 
 INSERT INTO sexes (attribut)
 VALUES ("Mâle"), ("Femelle"), ("Non binaire");
@@ -163,6 +163,16 @@ VALUES (
         9,
         1,
         1
+    ), (
+        "Lucas",
+        6,
+        "https://media.cdnws.com/_i/30379/1256/476/58/noeud-papillon-rose-pour-chien.jpeg",
+        "Chihuhua papillon",
+        "Lorem ipsum dolor sit amet. Ea natus maiores eos asperiores consequatur et earum quae et dignissimos harum aut voluptatem eaque? Qui voluptate omnis aut velit numquam id distinctio soluta ut repudiandae dolorem. Et soluta saepe aut debitis quam ut illum iure sed nihil blanditiis ut maxime animi vel laborum corrupti? ",
+        1,
+        2,
+        3,
+        5
     ), (
         "Hugues",
         4,
