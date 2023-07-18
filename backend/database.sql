@@ -175,7 +175,7 @@ VALUES (
         5
     ), (
         "Emmanuel",
-        12,
+        42,
         "https://media.ooreka.fr/public/image/3-306097-2233-full-13048901.jpg",
         "Berger Picard image",
         "Aut eius quaerat eum debitis impedit et placeat placeat in quibusdam galisum qui illo ullam non maiores dolor ut Quis expedita. Aut doloribus dolorem et vitae error et vero quisquam At nobis dolor et laudantium libero et molestias quam. Eum veniam velit et voluptatem beatae qui nostrum aperiam 33 rerum autem et odio assumenda non temporibus atque ut exercitationem mollitia? ",
