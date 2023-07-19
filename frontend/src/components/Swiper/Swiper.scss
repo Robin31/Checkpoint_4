@@ -1,0 +1,31 @@
+.player-wrapper {
+  height: 900px;
+  z-index: 1;
+}
+
+.react-player {
+  width: 100%;
+  padding-top: 8%;
+  z-index: 1;
+}
+
+.react-player iframe {
+  border-radius: 1.8rem;
+  padding: 0.2rem;
+  filter: saturate(20%);
+  z-index: 1;
+}
+
+.react-player iframe:hover {
+  filter: saturate(100%);
+}
+
+.Header-Swiper {
+  margin-top: 5%;
+  height: 50% !important;
+  width: 50%;
+}
+
+.swiper-wrapper {
+  height: 80%;
+}
