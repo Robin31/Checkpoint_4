@@ -9,6 +9,7 @@ const chiensControllers = require("./controllers/chiensControllers");
 const caracteresControllers = require("./controllers/caracteresControllers");
 const faqsControllers = require("./controllers/faqsControllers");
 const sexesControllers = require("./controllers/sexesControllers");
+const videosControllers = require("./controllers/videosControllers");
 
 const { hashPassword } = require("./services/auth");
 const { checkUserData, checkUpdateData } = require("./services/checkData");
@@ -28,6 +29,9 @@ router.get("/caracteres/:id", caracteresControllers.read);
 
 router.get("/chiens", chiensControllers.browse);
 router.get("/chiens/:id", chiensControllers.read);
+
+router.get("/videos", videosControllers.browse);
+router.get("/videos/:id", videosControllers.read);
 
 router.get("/profils/:id", profilsControllers.findUser);
 router.get("/profils", checkUpdateData, profilsControllers.browse);
