@@ -13,6 +13,8 @@ import Faqs from "./pages/admin/Faqs";
 import Races from "./pages/admin/Races";
 import Chiens from "./pages/admin/Chiens";
 
+import Error from "./Error";
+
 import "./App.css";
 
 function App() {
@@ -32,6 +34,7 @@ function App() {
           <Route path="chiens" element={<Chiens />} />
           <Route path="races" element={<Races />} />
         </Route>
+        <Route path="*" element={<Error />} />
       </Routes>
     </Router>
   );
