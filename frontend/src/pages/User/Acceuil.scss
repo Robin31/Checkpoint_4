@@ -34,3 +34,27 @@ h2 {
     width: 150%;
   }
 }
+
+.chiffre-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+  padding-right: 3%;
+  padding-left: 3%;
+}
+
+.chiffre-card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 28%;
+
+  p {
+    padding-top: 2%;
+  }
+}
+
+h3 {
+  font-size: 1.5em;
+  color: goldenrod;
+}

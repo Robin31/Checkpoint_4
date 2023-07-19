@@ -16,7 +16,9 @@ function Navbar() {
       <div className="container">
         <div className="left">
           <div className="logo">
-            <img className="main-logo" src={LogoRefuge} alt="logo-Refuge " />
+            <Link to="/">
+              <img className="main-logo" src={LogoRefuge} alt="logo-Refuge " />
+            </Link>
           </div>
           <div className="titres">
             <h1>Refuge</h1>
