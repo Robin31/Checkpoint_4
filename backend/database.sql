@@ -160,7 +160,7 @@ VALUES (
         "Lévrier Afghan image",
         "Ea voluptas corporis hic quis quisquam ut temporibus provident. Et animi quas rem quae voluptatem in assumenda illo. In pariatur dignissimos et magni eveniet sit enim ipsa aut repellat alias est eveniet suscipit qui ipsa dicta 33 corrupti nihil.",
         1,
-        9,
+        10,
         1,
         1
     ), (

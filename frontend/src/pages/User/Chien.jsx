@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import connexion from "../../services/connexion";
 import ChiensCard from "../../components/ChienCard/ChienCard";
+import "./Chien.scss";
 
 function Chien() {
   const [chiens, setChiens] = useState([]);

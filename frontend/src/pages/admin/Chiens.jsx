@@ -111,7 +111,7 @@ function Chiens() {
 
   return (
     <div className="Bloc1">
-      <div className="container">
+      <div className="chiens__container">
         <label htmlFor="">
           Choisir une chien
           <select onChange={(event) => updateChienState(+event.target.value)}>
