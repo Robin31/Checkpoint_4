@@ -6,6 +6,7 @@ import Signup from "./pages/User/Signup";
 import Faq from "./pages/User/Faq";
 import Chien from "./pages/User/Chien";
 import ChienSolo from "./pages/User/ChienSolo";
+import Localisation from "./pages/User/Localisation";
 
 import AdminLayout from "./Layout/AdminLayout";
 import Faqs from "./pages/admin/Faqs";
@@ -24,6 +25,7 @@ function App() {
           <Route path="faq" element={<Faq />} />
           <Route path="chiens" element={<Chien />} />
           <Route path="chiens/:id" element={<ChienSolo />} />
+          <Route path="localisation" element={<Localisation />} />
         </Route>
         <Route path="/admin" element={<AdminLayout />}>
           <Route path="faqs" element={<Faqs />} />
