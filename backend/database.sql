@@ -58,6 +58,13 @@ CREATE TABLE
         answer varchar(255) NOT NULL
     ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
+CREATE TABLE
+    videos (
+        id int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+        titre varchar(255) NOT NULL,
+        url LONGTEXT NOT NULL
+    ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
+
 INSERT INTO
     users (email, password, role)
 VALUES (
@@ -251,4 +258,28 @@ INSERT INTO
 VALUES (
         "Je pars en vacance la semaine prochaine, dois je vous indiquer à quel arbre j'ai attaché mon chien où je vous l'apporte directement ?",
         "Vous devez nous l'apporter directement que l'on puisse vous briser vos deux rotules."
+    );
+
+INSERT INTO videos (titre, url)
+VALUES (
+        "Meilleur ami de l'homme",
+        "https://www.youtube.com/watch?v=AsOxtPkBJ6o"
+    ), (
+        "Eduquer son chien",
+        "https://www.youtube.com/watch?v=srldqyxi0ZQ"
+    ), (
+        "Sociabile ton chien",
+        "https://www.youtube.com/watch?v=ZZedFWonePE"
+    ), (
+        "Meilleur ami de l'homme",
+        "https://www.youtube.com/watch?v=AsOxtPkBJ6o"
+    ), (
+        "Meilleur ami de l'homme",
+        "https://www.youtube.com/watch?v=AsOxtPkBJ6o"
+    ), (
+        "Meilleur ami de l'homme",
+        "https://www.youtube.com/watch?v=AsOxtPkBJ6o"
+    ), (
+        "Meilleur ami de l'homme",
+        "https://www.youtube.com/watch?v=AsOxtPkBJ6o"
     );

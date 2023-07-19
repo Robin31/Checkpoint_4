@@ -64,6 +64,11 @@ const FaqsManager = require("./FaqsManager");
 models.faqs = new FaqsManager();
 models.faqs.setDatabase(pool);
 
+const VideosManager = require("./VideosManager");
+
+models.videos = new VideosManager();
+models.videos.setDatabase(pool);
+
 const AuthManager = require("./AuthManager");
 
 models.auth = new AuthManager();
