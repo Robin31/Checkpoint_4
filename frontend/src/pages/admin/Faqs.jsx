@@ -28,6 +28,7 @@ function Faqs() {
     try {
       const faqData = await connexion.post("/faqs", faq);
       setFaq(faqData.data);
+      setFaqs();
     } catch (error) {
       toast.error("Une erreur est survenue");
     }
@@ -136,7 +137,7 @@ function Faqs() {
             Supprimer
           </button>
           <button
-            type="button"
+            type="submit"
             className="faqs__button"
             onClick={(event) => updateFaq(event)}
           >

@@ -1,11 +1,11 @@
-.faqs__container {
+.chiens__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-bottom: 1%;
 }
 
-.faqs__header {
+.chiens__header {
   padding-top: 1%;
 }
 
@@ -31,7 +31,14 @@ select {
   margin-top: 3%;
 }
 
-.faqs__button {
+.chiens__img {
+  width: auto;
+  height: 150px;
+  margin-left: 200px;
+  margin-top: 2%;
+}
+
+.chiens__button {
   text-align: center;
   border-radius: 6%;
   color: rgb(56, 56, 55);
@@ -49,20 +56,20 @@ select {
   background: rgb(236, 234, 234);
 }
 
-.faqs__buttons {
+.chiens__buttons {
   display: inline-flex;
 }
 
-.faqs__button:hover::before {
+.chiens__button:hover::before {
   height: 180%;
 }
 
-button.faqs__button:hover {
+button.chiens__button:hover {
   color: white;
   background: rgb(56, 56, 55);
 }
 
-.faqs__input {
+.chiens__input {
   border: none;
   background: rgb(236, 234, 234);
   color: black;
@@ -79,7 +86,7 @@ button.faqs__button:hover {
   transition: ease 0.5s;
 }
 
-.faqs__input:hover {
+.chiens__input:hover {
   border-bottom: 3px solid;
   border-color: violet;
   height: 25%;
@@ -87,7 +94,7 @@ button.faqs__button:hover {
   transition: ease 0.5s;
 }
 
-.faqs__container label {
+.chiens__container label {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -98,7 +105,7 @@ button.faqs__button:hover {
   padding-bottom: 5px;
 }
 
-.faqs__titre {
+.chiens__titre {
   font-family: "Times New Roman", Times, serif;
   text-align: center;
   margin-bottom: 10%;
@@ -108,7 +115,7 @@ button.faqs__button:hover {
   color: rgb(56, 56, 55);
 }
 
-.faqs__label {
+.chiens__label {
   font-family: "Times New Roman", Times, serif;
   color: rgb(56, 56, 55);
   text-align: center;
@@ -117,4 +124,11 @@ button.faqs__button:hover {
   font-weight: 400;
   font-size: 1.2rem;
   text-transform: uppercase;
+}
+
+.chiens__soustitre {
+  color: rgb(56, 56, 55);
+  font-size: 1.5rem;
+  font-family: "Times New Roman", Times, serif;
+  margin-left: 200px;
 }

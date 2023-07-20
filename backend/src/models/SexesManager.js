@@ -1,8 +1,8 @@
 const AbstractManager = require("./AbstractManager");
 
-class RacesManager extends AbstractManager {
+class SexesManager extends AbstractManager {
   constructor() {
-    super({ table: "races" });
+    super({ table: "sexes" });
   }
 
   find(id) {
@@ -16,4 +16,4 @@ class RacesManager extends AbstractManager {
   }
 }
 
-module.exports = RacesManager;
+module.exports = SexesManager;

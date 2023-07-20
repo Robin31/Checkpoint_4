@@ -6,7 +6,6 @@ import { TfiAlignJustify } from "react-icons/tfi";
 import { FaDog, FaQuestion } from "react-icons/fa";
 import { FaHandshakeSimple } from "react-icons/fa6";
 import { MdOutlineLogout } from "react-icons/md";
-import { TbNumber } from "react-icons/tb";
 import { LiaDnaSolid } from "react-icons/lia";
 import "./Sidebar.scss";
 
@@ -42,12 +41,6 @@ function Sidebar() {
       title: "Races",
       path: "/admin/races",
       icon: <LiaDnaSolid />,
-      cName: "nav-text",
-    },
-    {
-      title: "Chiffres",
-      path: "/admin/chiffres",
-      icon: <TbNumber />,
       cName: "nav-text",
     },
     {

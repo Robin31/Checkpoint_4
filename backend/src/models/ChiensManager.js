@@ -12,7 +12,13 @@ class ChiensManager extends AbstractManager {
   }
 
   findAll() {
-    return this.database.query(`select * from  ${this.table}`);
+    return this.database.query(
+      `select c.id, c.prenom, c.age, c.image, c.alternatif, c.description, c.castration, c.race_id, r.name, c.sexe_id, s.attribut, c.caractere_id, p.caractere
+      FROM ${this.table} c
+      INNER JOIN races r ON c.race_id = r.id
+      INNER JOIN sexes s ON c.sexe_id = s.id
+      INNER JOIN caracteres p ON c.caractere_id = p.id`
+    );
   }
 
   delete(id) {
