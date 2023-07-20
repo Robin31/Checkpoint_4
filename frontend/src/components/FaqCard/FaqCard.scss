@@ -5,19 +5,29 @@
   color: #ffffff;
   border: none;
   width: 60%;
+  height: 1.7rem;
   margin-top: 2rem;
-  display: block;
+  padding-top: 0.3rem;
+  display: flex;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
   font-size: 0.9rem;
+}
+
+.Bloc1 h1 {
+  font-size: 3rem;
+  color: rgb(56, 56, 55);
 }
 
 .answer {
   font-family: "Lato", sans-serif;
   font-size: 2rem;
   margin-top: 1rem;
-  margin-left: 12%;
   margin-right: auto;
+  display: flex;
+  justify-content: center;
+  color: rgb(56, 56, 55);
 }
 
 button {

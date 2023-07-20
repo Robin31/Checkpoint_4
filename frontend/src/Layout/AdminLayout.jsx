@@ -4,7 +4,7 @@ import Sidebar from "../components/SidebarCard/Sidebar";
 
 function AdminLayout() {
   return (
-    <div className="admin-container">
+    <div>
       <Sidebar />
       <Outlet />
     </div>
