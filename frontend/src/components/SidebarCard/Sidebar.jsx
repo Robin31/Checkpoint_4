@@ -60,7 +60,7 @@ function Sidebar() {
 
   return (
     <div className="sdb-container">
-      <div style={{ width: isOpen ? "200px" : "50px" }} className="sidebar">
+      <div style={{ width: isOpen ? "160px" : "50px" }} className="sidebar">
         <div className="top_section">
           <div
             style={{ display: isOpen ? "block" : "none" }}

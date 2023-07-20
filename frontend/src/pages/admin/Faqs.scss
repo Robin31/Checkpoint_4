@@ -1,0 +1,120 @@
+.faqs__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 1%;
+}
+
+.faqs__header {
+  padding-top: 1%;
+}
+
+option {
+  font-family: "Times New Roman", Times, serif;
+  border: none;
+  background: white;
+  color: black;
+  margin-top: 0px;
+  width: 15vw;
+  border-bottom: 5px solid;
+  border-color: black;
+  height: 40px;
+  border-radius: 3%;
+  margin-right: auto;
+  padding: 0.5rem;
+}
+
+select {
+  width: 25vw;
+  display: block;
+  margin-left: 200px;
+  margin-top: 3%;
+}
+
+.faqs__button {
+  text-align: center;
+  border-radius: 6%;
+  color: rgb(56, 56, 55);
+  display: block;
+  margin-top: 5%;
+  margin-left: 200px;
+  width: 10vw;
+  font-size: 1.5rem;
+  font-family: "Times New Roman", Times, serif;
+  text-decoration: none;
+  border: 1px solid;
+  border-color: rgb(56, 56, 55);
+  overflow: hidden;
+  transition: 1s all ease;
+  background: rgb(236, 234, 234);
+}
+
+.faqs__buttons {
+  display: inline-flex;
+}
+
+.faqs__button:hover::before {
+  height: 180%;
+}
+
+button.faqs__button:hover {
+  color: white;
+  background: rgb(56, 56, 55);
+}
+
+.faqs__input {
+  border: none;
+  background: rgb(236, 234, 234);
+  color: black;
+  margin-top: 0px;
+  width: 40vw;
+  border-bottom: 1px solid;
+  border-color: black;
+  height: 15%;
+  border-radius: 5px;
+  margin-left: 200px;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  transition: ease 0.5s;
+}
+
+.faqs__input:hover {
+  border-bottom: 3px solid;
+  border-color: violet;
+  height: 25%;
+  width: 40vw;
+  transition: ease 0.5s;
+}
+
+.faqs__container label {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 400px;
+  width: 400px;
+  margin-right: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.faqs__titre {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  margin-bottom: 10%;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-left: 200px;
+  color: rgb(56, 56, 55);
+}
+
+.faqs__label {
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(56, 56, 55);
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}

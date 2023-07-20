@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { toast, ToastContainer, Flip } from "react-toastify";
 import connexion from "../../services/connexion";
 import "react-toastify/dist/ReactToastify.css";
+import "./Faqs.scss";
 
 const faqModel = {
   id: null,
@@ -70,11 +71,14 @@ function Faqs() {
   }, []);
 
   return (
-    <div className="Bloc1">
-      <div className="Robin">
-        <label htmlFor="">
+    <div className="faqs__containeru">
+      <div className="faqs__header">
+        <label htmlFor="" className="faqs__titre">
           Choisir une question
-          <select onChange={(event) => updateFaqState(+event.target.value)}>
+          <select
+            className="faqs__select"
+            onChange={(event) => updateFaqState(+event.target.value)}
+          >
             <option value={0}>Rafraichir</option>
             {faqs.map((fq) => (
               <option key={fq.id} value={fq.id}>
@@ -84,15 +88,16 @@ function Faqs() {
           </select>
         </label>
       </div>
-      <form onSubmit={(event) => postFaq(event)}>
-        <label>
-          Question
+      <form className="faqs__container" onSubmit={(event) => postFaq(event)}>
+        <label className="faqs__label">
           <input
             type="text"
             required
             minLength={1}
             maxLength={255}
             name="question"
+            placeholder="Question"
+            className="faqs__input"
             value={faq.question}
             onChange={(event) =>
               handleFaq(event.target.name, event.target.value)
@@ -100,31 +105,44 @@ function Faqs() {
           />
         </label>
 
-        <label>
-          Answer
+        <label className="faqs__label">
           <input
             type="text"
             required
             minLength={1}
             maxLength={255}
             name="answer"
+            placeholder="Réponse"
+            className="faqs__input"
             value={faq.answer}
             onChange={(event) =>
               handleFaq(event.target.name, event.target.value)
             }
           />
         </label>
-        {!faq.id && <button type="submit">Ajouter</button>}
+        {!faq.id && (
+          <button type="submit" className="faqs__button">
+            Ajouter
+          </button>
+        )}
       </form>
       {faq.id && (
-        <>
-          <button type="button" onClick={(event) => deleteFaq(event)}>
+        <div className="faqs__buttons">
+          <button
+            type="button"
+            className="faqs__button"
+            onClick={(event) => deleteFaq(event)}
+          >
             Supprimer
           </button>
-          <button type="button" onClick={(event) => updateFaq(event)}>
+          <button
+            type="button"
+            className="faqs__button"
+            onClick={(event) => updateFaq(event)}
+          >
             Modifier
           </button>
-        </>
+        </div>
       )}
 
       <ToastContainer
