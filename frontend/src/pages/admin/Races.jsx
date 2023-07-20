@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { toast, ToastContainer, Flip } from "react-toastify";
 import connexion from "../../services/connexion";
 import "react-toastify/dist/ReactToastify.css";
+import "./Races.scss";
 
 const raceModel = {
   id: null,
@@ -26,6 +27,7 @@ function Races() {
     try {
       const raceData = await connexion.post("/races", race);
       setRace(raceData.data);
+      getRaces();
     } catch (error) {
       toast.error("Une erreur est survenue");
     }
@@ -44,6 +46,7 @@ function Races() {
     try {
       await connexion.put(`/races/${race.id}`, race);
       setRace(raceModel);
+      getRaces();
     } catch (error) {
       toast.error("Une erreur est survenue");
     }
@@ -69,11 +72,14 @@ function Races() {
   }, []);
 
   return (
-    <div className="Bloc1">
-      <div className="Robin">
-        <label htmlFor="">
+    <div className="races__containeru">
+      <div className="races__header">
+        <label htmlFor="" className="races__titre">
           Choisir une race
-          <select onChange={(event) => updateRaceState(+event.target.value)}>
+          <select
+            className="races__select"
+            onChange={(event) => updateRaceState(+event.target.value)}
+          >
             <option value={0}>Rafraichir</option>
             {races.map((rc) => (
               <option key={rc.id} value={rc.id}>
@@ -83,8 +89,8 @@ function Races() {
           </select>
         </label>
       </div>
-      <form onSubmit={(event) => postRace(event)}>
-        <label>
+      <form className="races__container" onSubmit={(event) => postRace(event)}>
+        <label className="races__label">
           Race
           <input
             type="text"
@@ -92,6 +98,7 @@ function Races() {
             minLength={1}
             maxLength={255}
             name="name"
+            className="races__input"
             value={race.name}
             onChange={(event) =>
               handleRace(event.target.name, event.target.value)
@@ -99,14 +106,26 @@ function Races() {
           />
         </label>
 
-        {!race.id && <button type="submit">Ajouter</button>}
+        {!race.id && (
+          <button type="submit" className="races__button">
+            Ajouter
+          </button>
+        )}
       </form>
       {race.id && (
         <>
-          <button type="button" onClick={(event) => deleteRace(event)}>
+          <button
+            type="button"
+            className="races__button"
+            onClick={(event) => deleteRace(event)}
+          >
             Supprimer
           </button>
-          <button type="button" onClick={(event) => updateRace(event)}>
+          <button
+            type="button"
+            className="races__button"
+            onClick={(event) => updateRace(event)}
+          >
             Modifier
           </button>
         </>

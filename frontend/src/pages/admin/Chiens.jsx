@@ -2,18 +2,22 @@ import React, { useState, useEffect } from "react";
 import { toast, ToastContainer, Flip } from "react-toastify";
 import connexion from "../../services/connexion";
 import "react-toastify/dist/ReactToastify.css";
+import "./Chiens.scss";
 
 const chienModel = {
   id: null,
   prenom: "",
   age: "",
   image: "",
-  alt: "",
+  alternatif: "",
   description: "",
   castration: "",
   race_id: "",
+  name: "",
   sexe_id: "",
+  attribut: "",
   caractere_id: "",
+  caractere: "",
 };
 
 function Chiens() {
@@ -64,13 +68,14 @@ function Chiens() {
     try {
       const chienData = await connexion.post("/chiens", chien);
       setChien(chienData.data);
+      getChiens();
     } catch (error) {
       toast.error("Une erreur est survenue");
     }
   };
 
   const updateChienState = (id) => {
-    if (id === 0) {
+    if (id === "") {
       setChien(chienModel);
     } else {
       setChien(chiens.find((ch) => ch.id === +id));
@@ -82,6 +87,7 @@ function Chiens() {
     try {
       await connexion.put(`/chiens/${chien.id}`, chien);
       setChien(chienModel);
+      getChiens();
     } catch (error) {
       toast.error("Une erreur est survenue");
     }
@@ -110,12 +116,15 @@ function Chiens() {
   }, []);
 
   return (
-    <div className="Bloc1">
-      <div className="chiens__container">
-        <label htmlFor="">
-          Choisir une chien
-          <select onChange={(event) => updateChienState(+event.target.value)}>
-            <option value={0}>Rafraichir</option>
+    <div className="chiens__containeru">
+      <div className="chiens__header">
+        <label htmlFor="" className="chiens__titre">
+          Choisir un chien
+          <select
+            className="chiens__select"
+            onChange={(event) => updateChienState(event.target.value)}
+          >
+            <option value="">Rafraichir</option>
             {chiens.map((ch) => (
               <option key={ch.id} value={ch.id}>
                 {ch.prenom}
@@ -123,19 +132,21 @@ function Chiens() {
             ))}
           </select>
         </label>
+        <img src={chien.image} alt="" className="chiens__img" />
       </div>
-      <div className="second-container">
-        <img src={chien.src} alt="imagerie de chien" />
-      </div>
-      <form onSubmit={(event) => postChien(event)}>
-        <label>
-          Prenom
+      <form
+        className="chiens__container"
+        onSubmit={(event) => postChien(event)}
+      >
+        <label className="chiens__label">
           <input
             type="text"
             required
             minLength={1}
             maxLength={255}
             name="prenom"
+            placeholder="Prénom"
+            className="chiens__input"
             value={chien.prenom}
             onChange={(event) =>
               handleChien(event.target.name, event.target.value)
@@ -143,14 +154,15 @@ function Chiens() {
           />
         </label>
 
-        <label>
-          Age
+        <label className="chiens__label">
           <input
             type="text"
             required
             minLength={1}
             maxLength={255}
             name="age"
+            placeholder="age"
+            className="chiens__input"
             value={chien.age}
             onChange={(event) =>
               handleChien(event.target.name, event.target.value)
@@ -158,14 +170,15 @@ function Chiens() {
           />
         </label>
 
-        <label>
-          Image
+        <label className="chiens__label">
           <input
             type="text"
             required
             minLength={10}
             maxLength={255}
             name="image"
+            placeholder="insérer image"
+            className="chiens__input"
             value={chien.image}
             onChange={(event) =>
               handleChien(event.target.name, event.target.value)
@@ -173,14 +186,15 @@ function Chiens() {
           />
         </label>
 
-        <label>
-          Alternatif
+        <label className="chiens__label">
           <input
             type="text"
             required
             minLength={1}
             maxLength={255}
             name="alternatif"
+            placeholder="texte-image"
+            className="chiens__input"
             value={chien.alternatif}
             onChange={(event) =>
               handleChien(event.target.name, event.target.value)
@@ -188,14 +202,15 @@ function Chiens() {
           />
         </label>
 
-        <label>
-          Castration
+        <label className="chiens__label">
           <input
             type="text"
             required
             minLength={1}
             maxLength={255}
             name="castration"
+            placeholder="Castration Oui/Non"
+            className="chiens__input"
             value={chien.castration}
             onChange={(event) =>
               handleChien(event.target.name, event.target.value)
@@ -203,23 +218,29 @@ function Chiens() {
           />
         </label>
 
-        <h2>Liste des races</h2>
         <select
+          className="chiens__select"
           name="race_id"
-          onChange={(event) => handleChien(event)}
+          onChange={(event) =>
+            handleChien(event.target.name, event.target.value)
+          }
           value={chien.race_id}
         >
           <option value="">Choisir la race</option>
           {races.map((race) => (
-            <option value={race.id}>{race.name}</option>
+            <option value={race.id} key={race.id}>
+              {race.name}
+            </option>
           ))}
         </select>
 
-        <h2>Liste des sexes</h2>
         <select
+          className="chiens__select"
           name="sexe_id"
-          onChange={(event) => handleChien(event)}
-          value={chiens.sexe_id}
+          onChange={(event) =>
+            handleChien(event.target.name, event.target.value)
+          }
+          value={chien.sexe_id}
         >
           <option value="">Choisir le sexe</option>
           {sexes.map((sexe) => (
@@ -227,10 +248,12 @@ function Chiens() {
           ))}
         </select>
 
-        <h2>Liste des caractères</h2>
         <select
+          className="chiens__select"
           name="caractere_id"
-          onChange={(event) => handleChien(event)}
+          onChange={(event) =>
+            handleChien(event.target.name, event.target.value)
+          }
           value={chien.caractere_id}
         >
           <option value="">Choisir le caractere</option>
@@ -239,17 +262,29 @@ function Chiens() {
           ))}
         </select>
 
-        {!chien.id && <button type="submit">Ajouter</button>}
+        {!chien.id && (
+          <button type="submit" className="chiens__button">
+            Ajouter
+          </button>
+        )}
       </form>
       {chien.id && (
-        <>
-          <button type="button" onClick={(event) => deleteChien(event)}>
+        <div className="chiens__buttons">
+          <button
+            type="button"
+            className="chiens__button"
+            onClick={(event) => deleteChien(event)}
+          >
             Supprimer
           </button>
-          <button type="button" onClick={(event) => updateChien(event)}>
+          <button
+            type="button"
+            className="chiens__button"
+            onClick={(event) => updateChien(event)}
+          >
             Modifier
           </button>
-        </>
+        </div>
       )}
 
       <ToastContainer
