@@ -17,7 +17,7 @@ const center = {
 function MyComponent() {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: import.meta.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+    googleMapsApiKey: import.meta.env.VITE_PUBLIC_GOOGLE_MAPS_API_KEY,
   });
 
   const [map, setMap] = React.useState(null);
@@ -33,7 +33,7 @@ function MyComponent() {
     setMap(null);
   }, []);
 
-  return (
+  return isLoaded ? (
     <>
       <GoogleMap
         className="map-container"
@@ -47,7 +47,7 @@ function MyComponent() {
       </GoogleMap>
       <Tableau />
     </>
-  );
+  ) : null;
 }
 
 export default React.memo(MyComponent);
