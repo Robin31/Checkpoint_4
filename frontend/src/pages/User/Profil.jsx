@@ -70,21 +70,6 @@ function Profil() {
           />
         </label>
 
-        {/* <label className="profils__label">
-          <input
-            type="text"
-            required
-            minLength={1}
-            maxLength={255}
-            name="image"
-            placeholder="insérer image"
-            className="profils__input"
-            value={user.image}
-            onChange={(event) =>
-              handleUser(event)
-            }
-          />
-        </label> */}
         <button type="submit" className="profils__button">
           Modifier
         </button>
