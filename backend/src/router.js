@@ -11,6 +11,7 @@ const faqsControllers = require("./controllers/faqsControllers");
 const sexesControllers = require("./controllers/sexesControllers");
 const videosControllers = require("./controllers/videosControllers");
 const usersControllers = require("./controllers/usersControllers");
+const benevolesControllers = require("./controllers/benevolesControllers");
 
 const { hashPassword } = require("./services/auth");
 const { checkUserData, checkUpdateData } = require("./services/checkData");
@@ -44,6 +45,8 @@ router.put("/profils/:id", profilsControllers.edit);
 router.get("/faqs", faqsControllers.browse);
 router.get("/faqs/:id", faqsControllers.read);
 
+router.post("/benevoles", benevolesControllers.add);
+
 router.use(checkUser);
 router.put("/races/:id", racesControllers.edit);
 router.post("/races", racesControllers.add);
@@ -63,6 +66,10 @@ router.delete("/faqs/:id", faqsControllers.destroy);
 
 router.put("/users/:id", usersControllers.edit);
 router.post("/users", usersControllers.add);
+
+router.get("/benevoles", benevolesControllers.browse);
+router.get("/benevoles/:id", benevolesControllers.read);
+router.delete("/benevoles/:id", benevolesControllers.destroy);
 
 // router.get("/admin/profils/:id", profilsControllers.getUserinfo);
 // router.put("/profils/update", profilsControllers.editUserbyId);
