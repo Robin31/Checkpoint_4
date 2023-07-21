@@ -27,7 +27,7 @@ function Sidebar() {
     },
     {
       title: "Bénévole",
-      path: "/admin/benevole",
+      path: "/admin/benevoles",
       icon: <FaHandshakeSimple />,
       cName: "nav-text",
     },

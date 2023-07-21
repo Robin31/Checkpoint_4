@@ -15,6 +15,7 @@ import AdminLayout from "./Layout/AdminLayout";
 import Faqs from "./pages/admin/Faqs";
 import Races from "./pages/admin/Races";
 import Chiens from "./pages/admin/Chiens";
+import Benevoles from "./pages/admin/Benevoles";
 
 import Error from "./Error";
 
@@ -37,6 +38,7 @@ function App() {
         </Route>
         <Route path="/admin" element={<AdminLayout />}>
           <Route path="faqs" element={<Faqs />} />
+          <Route path="benevoles" element={<Benevoles />} />
           <Route path="chiens" element={<Chiens />} />
           <Route path="races" element={<Races />} />
         </Route>
