@@ -24,7 +24,7 @@ function Benevole() {
       const benevoleData = await connexion.post("/benevoles", benevole);
       setBenevole(benevoleData.data);
     } catch (success) {
-      toast.success(" erreur est survenue");
+      toast.success("Votre candidature a été envoyé");
     }
   };
 

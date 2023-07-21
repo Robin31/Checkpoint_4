@@ -12,9 +12,11 @@ import Profil from "./pages/User/Profil";
 import Benevole from "./pages/User/Benevole";
 
 import AdminLayout from "./Layout/AdminLayout";
+import Home from "./pages/admin/Home";
 import Faqs from "./pages/admin/Faqs";
 import Races from "./pages/admin/Races";
 import Chiens from "./pages/admin/Chiens";
+import Benevoles from "./pages/admin/Benevoles";
 
 import Error from "./Error";
 
@@ -32,11 +34,13 @@ function App() {
           <Route path="chiens" element={<Chien />} />
           <Route path="chiens/:id" element={<ChienSolo />} />
           <Route path="localisation" element={<Localisation />} />
-          <Route path="profil" element={<Profil />} />
           <Route path="benevole" element={<Benevole />} />
+          <Route path="profil" element={<Profil />} />
         </Route>
         <Route path="/admin" element={<AdminLayout />}>
+          <Route path="" element={<Home />} />
           <Route path="faqs" element={<Faqs />} />
+          <Route path="benevoles" element={<Benevoles />} />
           <Route path="chiens" element={<Chiens />} />
           <Route path="races" element={<Races />} />
         </Route>

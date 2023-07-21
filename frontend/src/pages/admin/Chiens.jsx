@@ -70,7 +70,7 @@ function Chiens() {
       setChien(chienData.data);
       getChiens();
     } catch (error) {
-      toast.error("Une erreur est survenue");
+      toast.error("Une erreur est ");
     }
   };
 

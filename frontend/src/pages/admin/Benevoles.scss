@@ -1,42 +1,52 @@
-.profils__container {
+.benevoles__container {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   padding-bottom: 1%;
-  margin-top: 5%;
 }
 
-.profils__container label {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  // max-width: 330px;
-  width: 30vw;
-  margin-left: auto;
+.benevoles__header {
+  padding-top: 1%;
+}
+
+option {
+  font-family: "Times New Roman", Times, serif;
+  border: none;
+  background: white;
+  color: black;
+  margin-top: 0px;
+  width: 15vw;
+  border-bottom: 5px solid;
+  border-color: black;
+  height: 40px;
+  border-radius: 3%;
   margin-right: auto;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 0.5rem;
 }
 
-.profils__img {
-  width: 200px;
-  height: 200px;
-  // margin-left: 200px;
+select {
+  width: 25vw;
+  display: block;
+  margin-left: 200px;
+  margin-top: 3%;
+}
+
+.benevoles__img {
+  width: auto;
+  height: 150px;
+  margin-left: 200px;
   margin-top: 2%;
-  border-radius: 100%;
 }
 
-.profils__button {
+.benevoles__button {
   text-align: center;
   border-radius: 6%;
   color: rgb(56, 56, 55);
   display: block;
   margin-top: 5%;
-  // margin-left: 200px;
+  margin-left: 200px;
   width: 10vw;
-  font-size: 1.0rem;
+  font-size: 1.5rem;
   font-family: "Times New Roman", Times, serif;
   text-decoration: none;
   border: 1px solid;
@@ -46,16 +56,20 @@
   background: rgb(236, 234, 234);
 }
 
-.profils__button:hover::before {
+.benevoles__buttons {
+  display: inline-flex;
+}
+
+.benevoles__button:hover::before {
   height: 180%;
 }
 
-button.profils__button:hover {
+button.benevoles__button:hover {
   color: white;
   background: rgb(56, 56, 55);
 }
 
-.profils__input {
+.benevoles__input {
   border: none;
   background: rgb(236, 234, 234);
   color: black;
@@ -65,17 +79,14 @@ button.profils__button:hover {
   border-color: black;
   height: 15%;
   border-radius: 5px;
-  // margin-left: 200px;
+  margin-left: 200px;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   padding: 0.5rem;
   transition: ease 0.5s;
 }
 
-.profils__input:hover {
+.benevoles__input:hover {
   border-bottom: 3px solid;
   border-color: violet;
   height: 25%;
@@ -83,7 +94,7 @@ button.profils__button:hover {
   transition: ease 0.5s;
 }
 
-.profils__container label {
+.benevoles__container label {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -94,17 +105,17 @@ button.profils__button:hover {
   padding-bottom: 5px;
 }
 
-.profils__titre {
+.benevoles__titre {
   font-family: "Times New Roman", Times, serif;
   text-align: center;
   margin-bottom: 10%;
   font-weight: 400;
   font-size: 2rem;
-  // margin-left: 200px;
+  margin-left: 200px;
   color: rgb(56, 56, 55);
 }
 
-.profils__label {
+.benevoles__label {
   font-family: "Times New Roman", Times, serif;
   color: rgb(56, 56, 55);
   text-align: center;
@@ -115,9 +126,9 @@ button.profils__button:hover {
   text-transform: uppercase;
 }
 
-.profils__soustitre {
+.benevoles__soustitre {
   color: rgb(56, 56, 55);
   font-size: 1.5rem;
   font-family: "Times New Roman", Times, serif;
-  // margin-left: 200px;
+  margin-left: 200px;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { toast, ToastContainer, Flip } from "react-toastify";
+import { Link } from "react-router-dom";
 import connexion from "../../services/connexion";
 import { useCurrentUser } from "../../contexts/AuthContexts";
 import "./Profil.scss";
@@ -27,7 +28,7 @@ function Profil() {
         className="profils__container"
         onSubmit={(event) => updateUser(event)}
       >
-        <img src={user.image} alt="" className="profils__img" />
+        <img src={user.src} alt="" className="profils__img" />
         <label className="profils__label">
           <input
             type="text"
@@ -73,6 +74,11 @@ function Profil() {
         <button type="submit" className="profils__button">
           Modifier
         </button>
+        <Link to="/">
+          <button type="button" className="profils__button">
+            Deconnexion
+          </button>
+        </Link>
       </form>
       <ToastContainer
         autoClose={2000}
