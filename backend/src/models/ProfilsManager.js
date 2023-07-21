@@ -26,7 +26,7 @@ class ProfilsManager extends AbstractManager {
 
   insertProfils(userId) {
     return this.database.query(
-      `INSERT INTO ${this.table} (firstname, lastname, src, user_id) values ("riri", "fifi", "loulou", ?)`,
+      `INSERT INTO ${this.table} (firstname, lastname, src, user_id) values ("", "", "", ?)`,
       [userId]
     );
   }

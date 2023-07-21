@@ -27,7 +27,7 @@ function Profil() {
         className="profils__container"
         onSubmit={(event) => updateUser(event)}
       >
-        <img src={user.image} alt="" className="profils__img" />
+        <img src={user.src} alt="" className="profils__img" />
         <label className="profils__label">
           <input
             type="text"
@@ -63,7 +63,7 @@ function Profil() {
             minLength={1}
             maxLength={255}
             name="src"
-            placeholder="age"
+            placeholder="image avatar"
             className="profils__input"
             value={user.src}
             onChange={(event) => handleUser(event)}

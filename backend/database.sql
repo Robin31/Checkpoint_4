@@ -11,7 +11,7 @@ CREATE TABLE
         id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
         firstname VARCHAR(80),
         lastname VARCHAR(80),
-        src VARCHAR(255),
+        src Longtext,
         user_id INT,
         CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users(id)
     );
