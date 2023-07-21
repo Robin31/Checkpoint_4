@@ -8,6 +8,7 @@ import "./Signin.scss";
 
 function Signup() {
   const [userSignup, setUserSignup] = useState({
+    id: null,
     email: "",
     password: "",
     passwordConfirmation: "",

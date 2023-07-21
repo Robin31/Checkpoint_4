@@ -1,0 +1,123 @@
+.profils__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1%;
+  margin-top: 5%;
+}
+
+.profils__container label {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  // max-width: 330px;
+  width: 30vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.profils__img {
+  width: 200px;
+  height: 200px;
+  // margin-left: 200px;
+  margin-top: 2%;
+  border-radius: 100%;
+}
+
+.profils__button {
+  text-align: center;
+  border-radius: 6%;
+  color: rgb(56, 56, 55);
+  display: block;
+  margin-top: 5%;
+  // margin-left: 200px;
+  width: 10vw;
+  font-size: 1.5rem;
+  font-family: "Times New Roman", Times, serif;
+  text-decoration: none;
+  border: 1px solid;
+  border-color: rgb(56, 56, 55);
+  overflow: hidden;
+  transition: 1s all ease;
+  background: rgb(236, 234, 234);
+}
+
+.profils__button:hover::before {
+  height: 180%;
+}
+
+button.profils__button:hover {
+  color: white;
+  background: rgb(56, 56, 55);
+}
+
+.profils__input {
+  border: none;
+  background: rgb(236, 234, 234);
+  color: black;
+  margin-top: 0px;
+  width: 40vw;
+  border-bottom: 1px solid;
+  border-color: black;
+  height: 15%;
+  border-radius: 5px;
+  // margin-left: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  transition: ease 0.5s;
+}
+
+.profils__input:hover {
+  border-bottom: 3px solid;
+  border-color: violet;
+  height: 25%;
+  width: 40vw;
+  transition: ease 0.5s;
+}
+
+.profils__container label {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 400px;
+  width: 400px;
+  margin-right: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.profils__titre {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  margin-bottom: 10%;
+  font-weight: 400;
+  font-size: 2rem;
+  // margin-left: 200px;
+  color: rgb(56, 56, 55);
+}
+
+.profils__label {
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(56, 56, 55);
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.profils__soustitre {
+  color: rgb(56, 56, 55);
+  font-size: 1.5rem;
+  font-family: "Times New Roman", Times, serif;
+  // margin-left: 200px;
+}

@@ -44,6 +44,11 @@ const SexesManager = require("./SexesManager");
 models.sexes = new SexesManager();
 models.sexes.setDatabase(pool);
 
+const UsersManager = require("./UsersManager");
+
+models.users = new UsersManager();
+models.users.setDatabase(pool);
+
 const CaracteresManager = require("./CaracteresManager");
 
 models.caracteres = new CaracteresManager();

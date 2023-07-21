@@ -14,9 +14,25 @@ const findUser = (req, res) => {
     });
 };
 
+const read = (req, res) => {
+  models.profils
+    .find(req.params.id)
+    .then(([rows]) => {
+      if (rows[0] == null) {
+        res.sendStatus(404);
+      } else {
+        res.send(rows[0]);
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
+
 const browse = (req, res) => {
   models.profils
-    .getUser()
+    .findAll()
     .then(([rows]) => {
       res.send(rows);
     })
@@ -51,6 +67,27 @@ const editUserbyId = (req, res) => {
       res.sendStatus(500);
     });
 };
+
+const edit = (req, res) => {
+  const profil = req.body;
+
+  profil.id = parseInt(req.params.id, 10);
+
+  models.profils
+    .update(profil.firstname, profil.lastname, profil.src, profil.id)
+    .then(([result]) => {
+      if (result.affectedRows === 0) {
+        res.sendStatus(404);
+      } else {
+        res.send("Bien joué mec !");
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
+
 const AdmineditUserbyId = (req, res) => {
   const profilUpdate = req.body[0];
   const id = parseInt(req.params.id, 10);
@@ -68,6 +105,8 @@ const AdmineditUserbyId = (req, res) => {
 
 module.exports = {
   findUser,
+  read,
+  edit,
   editUserbyId,
   browse,
   getUserinfo,

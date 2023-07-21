@@ -8,6 +8,7 @@ import Faq from "./pages/User/Faq";
 import Chien from "./pages/User/Chien";
 import ChienSolo from "./pages/User/ChienSolo";
 import Localisation from "./pages/User/Localisation";
+import Profil from "./pages/User/Profil";
 
 import AdminLayout from "./Layout/AdminLayout";
 import Faqs from "./pages/admin/Faqs";
@@ -30,6 +31,7 @@ function App() {
           <Route path="chiens" element={<Chien />} />
           <Route path="chiens/:id" element={<ChienSolo />} />
           <Route path="localisation" element={<Localisation />} />
+          <Route path="profil" element={<Profil />} />
         </Route>
         <Route path="/admin" element={<AdminLayout />}>
           <Route path="faqs" element={<Faqs />} />

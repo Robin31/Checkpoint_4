@@ -38,8 +38,7 @@ function Signin() {
 
       if (signin.status === 200) {
         const profil = {
-          role: signin.data.role,
-          id: signin.data.id,
+          ...signin.data,
           connected: true,
         };
         setUser(profil);
@@ -60,7 +59,6 @@ function Signin() {
       );
     }
   };
-
   return (
     <div className="login">
       <div className="login__content">
