@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaDog, FaEuroSign, FaQuestion } from "react-icons/fa";
+import { FaDog, FaQuestion } from "react-icons/fa";
 import { BsFillPersonFill } from "react-icons/bs";
 import { HiMapPin } from "react-icons/hi2";
 import { FaHandshakeSimple } from "react-icons/fa6";
 import { CiMenuBurger } from "react-icons/ci";
 import LogoRefuge from "../../assets/LogoRefuge.png";
 import "./Navbar.scss";
+import { useCurrentUser } from "../../contexts/AuthContexts";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const { user } = useCurrentUser();
 
   return (
     <div className="header-container">
@@ -35,17 +37,19 @@ function Navbar() {
               <FaHandshakeSimple /> Bénévole
             </Link>
           </li>
-          <li className="nav-item3">
-            <Link to="/donation" className="nav-link">
-              <FaEuroSign /> Donation
-            </Link>
-          </li>
         </div>
         <div className="right">
           <li className="nav-item4">
-            <Link to="/compte" className="nav-link">
-              Se connecter <BsFillPersonFill />
-            </Link>
+            {user.connected ? (
+              <Link to="/profil" className="nav-link">
+                {" "}
+                Mon compte <BsFillPersonFill />{" "}
+              </Link>
+            ) : (
+              <Link to="/compte" className="nav-link">
+                Se connecter <BsFillPersonFill />
+              </Link>
+            )}
           </li>
           <li className="nav-item5">
             <Link to="/localisation" className="nav-link">
@@ -76,11 +80,6 @@ function Navbar() {
               <li className="nav-item2">
                 <Link to="/benevole" className="nav-link">
                   Bénévole <FaHandshakeSimple />
-                </Link>
-              </li>
-              <li className="nav-item3">
-                <Link to="/donation" className="nav-link">
-                  Donation <FaEuroSign />
                 </Link>
               </li>
               <li className="nav-item4">

@@ -51,7 +51,7 @@ function VideosSwiper() {
         {videos.map((video) => (
           <SwiperSlide key={video.id}>
             <ReactPlayer
-              classname="react-player"
+              className="react-player"
               url={video.url}
               width="100%"
               heigth="100%"

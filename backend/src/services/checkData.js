@@ -2,6 +2,7 @@ const joi = require("joi");
 
 const authSchema = () => {
   return joi.object({
+    id: null,
     email: joi.string().email({
       minDomainSegments: 2,
       tlds: { allow: ["com"] },
@@ -22,10 +23,10 @@ const updateSchema = () => {
       tlds: { allow: ["com"] },
     }),
 
-    // firstname: joi.string().alphanum(),
-    // lastname: joi.string().alphanum(),
-    // src: joi.string(),
-    // id: joi.number().integer(),
+    firstname: joi.string().alphanum(),
+    lastname: joi.string().alphanum(),
+    src: joi.string(),
+    id: joi.number().integer(),
   });
 };
 

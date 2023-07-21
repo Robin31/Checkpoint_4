@@ -14,7 +14,7 @@ class AuthManager extends AbstractManager {
 
   findUser(email) {
     return this.database.query(
-      `select password, role, id from ${this.table} where email = ?`,
+      `select p.firstname, p.lastname, p.src, u.email, u.password, u.role, u.id from ${this.table} u INNER JOIN profils as p on u.id = p.user_id where email = ?`,
       [email]
     );
   }
