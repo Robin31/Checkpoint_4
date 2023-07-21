@@ -63,7 +63,7 @@ function Profil() {
             minLength={1}
             maxLength={255}
             name="src"
-            placeholder="age"
+            placeholder="Insérer image"
             className="profils__input"
             value={user.src}
             onChange={(event) => handleUser(event)}

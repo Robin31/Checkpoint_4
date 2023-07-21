@@ -11,9 +11,18 @@ CREATE TABLE
         id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
         firstname VARCHAR(80),
         lastname VARCHAR(80),
-        src VARCHAR(255),
+        src Longtext,
         user_id INT,
         CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users(id)
+    );
+
+CREATE TABLE
+    benevoles(
+        id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+        prenom VARCHAR(25),
+        nom VARCHAR(25),
+        age INT,
+        motivation Longtext
     );
 
 CREATE TABLE
@@ -94,6 +103,15 @@ VALUES (
         "LePanda",
         "https://previews.123rf.com/images/jemastock/jemastock1705/jemastock170508361/78184821-t%C3%AAte-de-dessin-visage-souriant-illustration-de-vecteur-de-caract%C3%A8re-enfant.jpg",
         2
+    );
+
+INSERT INTO
+    benevoles (prenom, nom, age, motivation)
+VALUES (
+        "jacques",
+        "prevert",
+        12,
+        "Trop hâte d'aider les chiens"
     );
 
 INSERT INTO races (name)
