@@ -32,8 +32,8 @@ function App() {
           <Route path="chiens" element={<Chien />} />
           <Route path="chiens/:id" element={<ChienSolo />} />
           <Route path="localisation" element={<Localisation />} />
-          <Route path="benevole" element={<Benevole />} />
           <Route path="profil" element={<Profil />} />
+          <Route path="benevole" element={<Benevole />} />
         </Route>
         <Route path="/admin" element={<AdminLayout />}>
           <Route path="faqs" element={<Faqs />} />
