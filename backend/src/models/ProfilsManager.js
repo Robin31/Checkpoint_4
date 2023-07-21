@@ -7,7 +7,7 @@ class ProfilsManager extends AbstractManager {
 
   findAll() {
     return this.database.query(
-      `select p.id, p.prenom, p.nom, p.age, p.benevole, p.motivation, p.image, u.email from ${this.table} p INNER JOIN users u ON u.id = p.user_id`
+      `select p.id, p.firstname, p.lastname, p.src, u.email from ${this.table} p INNER JOIN users u ON u.id = p.user_id`
     );
   }
 
@@ -26,7 +26,7 @@ class ProfilsManager extends AbstractManager {
 
   insertProfils(userId) {
     return this.database.query(
-      `INSERT INTO ${this.table} (firstname, lastname, src, user_id) values ("riri", "fifi", "loulou", ?)`,
+      `INSERT INTO ${this.table} (firstname, lastname, src, user_id) values ("", "", "", ?)`,
       [userId]
     );
   }

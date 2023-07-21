@@ -39,6 +39,11 @@ const RacesManager = require("./RacesManager");
 models.races = new RacesManager();
 models.races.setDatabase(pool);
 
+const BenevolesManager = require("./BenevolesManager");
+
+models.benevoles = new BenevolesManager();
+models.benevoles.setDatabase(pool);
+
 const SexesManager = require("./SexesManager");
 
 models.sexes = new SexesManager();
